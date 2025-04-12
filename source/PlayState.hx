@@ -71,7 +71,7 @@ class PlayState extends FlxState
 		flixel2Text.y = flixel2.y + flixel2.height + 20;
 		add(flixel2Text);
 
-		scaleText = new FlxText(10, 10, 'Scale ($SCALE_MIN-$SCALE_MAX): ${SCALE_MAX}x', 24);
+		scaleText = new FlxText(10, 10, 'Scale (${SCALE_MIN}x-${SCALE_MAX}x): ${SCALE_MAX}x', 24);
 		add(scaleText);
 
 		infoText = new FlxText(10, scaleText.y + scaleText.height, 0, 'Use LEFT & RIGHT to change scale.\nHold SHIFT to decrease by ${SCALE_MIN}x (default is ${SCALE_MIN*2}x)', 16);
@@ -111,7 +111,7 @@ class PlayState extends FlxState
 		FlxG.bitmapLog.add(flixel.graphic.bitmap);
 		FlxG.bitmapLog.add(boyfriend.frames.parent.bitmap);
 
-		scaleText.text = 'Scale ($SCALE_MIN-$SCALE_MAX): ${scale}x';
+		scaleText.text = 'Scale (${SCALE_MIN}x-${SCALE_MAX}x): ${scale}x';
 	}
 
 	function scaleBitmapData(bitmap:BitmapData, scale:Float):BitmapData
